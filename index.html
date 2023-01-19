@@ -1,0 +1,102 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="stil.css">
+<title>Moj Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Junior Programer</p>
+            <h1>Bok, ja sam Karlo,<br>a ovo je moj portfolio.</h1>
+        </div>
+    </div>
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col1">
+                <img src="me.jpg">
+            </div>
+
+            <div class="about-col2">
+                <h2>About me</h2>
+                <p>Oduvijek su me zanimala računala i bilo kakva tehnologija. Završio sam četverogodišnju srednju školu smjera tehničar za računalstvo
+                    jer sam želio naučiti programirati i održavati računala. Programiram u slobodno vrijeme nakon posla te se nadam da ću 
+                    uspijeti dobiti juniorsku poziciju u IT sektoru.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>HTML/CSS</span><br>Stečeno znanje iz praktične nastave napređujem svaki dan. Volim slušati YT tutorijale
+                        te čitati W3 Schools. Ovaj projekt je sam primjer mojeg znanja i vještina. </li>
+                        <li><span>PHP</span><br>Znam osnovne stvari. Nisam imao priliku niti razloga detaljnije uči u taj pojam.</li>
+                        <li><span>MySQL</span><br>Znam raditi baze podataka, pisati i programirati osnove.</li>
+                        <li><span>Robotika</span><br>U osnovnoj školi me zanimala robotika i automatizacija te sam aktivno sudjelovao u toj
+                        aktivnosti. Išao sam na mnoga natjecanja Croatian Makers lige te čak osvojio 1.mjesto</li>
+                        <li><span>C/C++</span><br>Poznajem osnove programiranja u tim jezicima te mi nisu strani.</li>
+                        <li><span>Dijagnosticiranje kvara i grešaka računala i njegovih komponenti</span><br>Nije mi problem dijagnosticirati kvar računala i popraviti ga. 
+                        Vrlo dobro poznajem komponente računala te sam sklopio svoje vlastito ralunalo i instalirao OS i drivere na njega. Aktualno pratim
+                    vijesti iz svijeta tehnologije.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Radnik u proizvodnji</span><br>Radim kao rukovatelj linije tiska za podloške jaja. Ovaj posao od mene zahtjeva
+                        preciznost, snalažljivost i točno pračenje uputa. Pazim na boju, čitljivost teksta i kvalitetu naljepjenih naljepnica na podloške. Na računalu
+                    upisujem palete s podlošcima te odjavljem sanduke s robom. Zbog uvođenja novog sustava te programa na sva računala u firmi(tisak i proizvodnja)
+                moram raditi kao dežurni informatičar zbog informatičke nepismenosti radnika u mojoj smjeni.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Tehničar za računalstvo</span><br>Završio sam četverogodišnju školu s vrlo uspješnim rezultatima. Uvijek sam se trudio
+                        da moja riješenja problema budu drugačija od ostalih. Tražio sam dodatna znanja od profesora te sam aktivno dolazio na dodatnu nastavu subotom.
+                    Za svaki zadatak sam dodao malo više od traženog. Predstavljao sam svoju školu i zanimanje na trgu grada s svojim zavrnšnim 
+                    radom koji je bio BT auto. Školovanje ne nastavljam na faksu jer me zanima samo programiranje i računala i u tome 
+                želim biti najbolji što mogu. Zbog tog razloga se ne želim mučiti s fizikom, književnim djelom hrvatskog jezika i lektirama</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+
+</body>
+
+</html>
